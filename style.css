@@ -1,0 +1,609 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+    background-repeat: repeat;
+    background-attachment: fixed;
+	font-family: sans-serif;
+}
+
+h1 h2 {  
+  font-family: 'Bai Jamjuree', sans-serif; 
+}  
+
+
+	
+
+.main-bg {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #005b41 0%,       /* Deep green (Islam, nature) */
+        #ffd700 20%,     /* Gold (prosperity, royalty) */
+        #d22730 40%,     /* Red (bravery, passion) */
+        #1e56a0 60%,     /* Blue (spirituality, water) */
+        #ffffff 80%,     /* White (purity, peace) */
+        #005b41 100%     /* Repeating deep green */
+    );
+    background-size: 400% 500%;
+    animation: gradientFlow 15s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+body {
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.head {
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-align: center;
+    font-weight: bold;
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+	color:white;
+	    
+}
+
+.head span {
+    display: inline-block;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.logo {
+    width: 378px;
+    height: 176px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.sub-headline {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Navigation */
+.navbar {
+    padding: 0;
+}
+
+.navbar-nav {
+    width: 100%;
+    justify-content: center;
+}
+
+.nav-link {
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    background: #4CAF50;
+    border-radius: 5px;
+    color: white !important;
+}
+
+/* Hero Section */
+#hero {
+    background: url('images/jungle.jpg') no-repeat center center/cover;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 2s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero Animations - Wildboar, Monkey, Eagle*/
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+	
+@keyframes wildboar {
+    0% { transform: translateX(-100%); opacity: 0; }  /* Start hidden */
+    20% { transform: translateX(0); opacity: 1; }     /* Slide in */
+    70% { transform: translateX(0); opacity: 1; }     /* Stay visible for 5 seconds */
+    100% { transform: translateX(-100%); opacity: 0; } /* Slide out */
+}
+
+.wildboar {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transform: translateY(-50%);
+	width: 300px; /* Adjust as needed */
+    opacity: 0; /* Initially hidden */
+    animation: wildboar 15s ease-in-out infinite;
+    animation-delay: 2s; /* Start animation after 2 seconds */
+}
+
+@keyframes jumpMonkey {
+    0%, 100% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-50px); opacity: 1; }
+}
+
+.monkey {
+    position: absolute;
+    left: 70%;
+    top: 75%;
+    width: 400px;
+    opacity: 0;
+    animation: jumpMonkey 1s infinite ease-in-out;
+    animation-delay: 2s;
+}
+
+@keyframes glideEagle {
+    0% { left: -300px; top: -110%; transform: rotate(0deg); }
+    50% { left: 50%; top: -80%; transform: rotate(10deg); }
+    100% { left: 100%; top: -90%; transform: rotate(0deg); }
+}
+
+.eagle {
+    position: absolute;
+    left: -300px;
+    width: 300px;
+    opacity: 1;
+    animation: glideEagle 10s ease-in-out infinite;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+
+
+/* hero button */
+.mindanao-abundance-btn {
+  position: relative;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+;
+ color: #2b2d42;
+  background: linear-gradient(
+    45deg,
+    #D35400,  /* Pumpkin orange */
+    #E67E22,  /* Carrot orange */
+    #F39C12   /* Bright orange */
+  );
+  border: none;
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.mindanao-abundance-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.mindanao-abundance-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.mindanao-abundance-btn:hover::before {
+  left: 100%;
+}
+
+.btn-text {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-icons {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.btn-icons i {
+  margin: 0 3px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.btn-icons i:nth-child(1) {
+  color: #d4a373; /* Traditional gold */
+  animation-delay: 0s;
+}
+
+.btn-icons i:nth-child(2) {
+  color: #3a5a40; /* Mountain green */
+  animation-delay: 0.5s;
+}
+
+.btn-icons i:nth-child(3) {
+  color: #457b9d; /* Ocean blue */
+  animation-delay: 1s;
+}
+
+.btn-icons i:nth-child(4) {
+  color: #e63946; /* Fruit red */
+  animation-delay: 1.5s;
+}
+
+.btn-icons i:nth-child(5) {
+  color: #a8dadc; /* Water cyan */
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Traditional Mindanao patterns on hover */
+.mindanao-abundance-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M0,0 L20,20 M20,0 L0,20" stroke="%23ffffff10" stroke-width="1"/></svg>'),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><circle cx="15" cy="15" r="3" fill="%23ffffff10"/></svg>');
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.mindanao-abundance-btn:hover::after {
+  opacity: 1;
+}
+
+
+
+/* Feature Cards */
+.feature-card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Flip Cards */
+.container .card {
+    border: none;
+    perspective: 1000px;
+    background: transparent;
+    margin-bottom: 20px;
+}
+
+.container .card .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.icon1 { background-image: url('images/mtapo.png'); }
+.icon2 { background-image: url('images/surfing.png'); }
+.icon3 { background-image: url('images/tourism.png'); }
+.icon4 { background-image: url('images/dc.png'); }
+.icon5 { background-image: url('images/festival.png'); }
+.icon6 { background-image: url('images/culturallandmark.png'); }
+.icon7 { background-image: url('images/pineapple.png'); }
+.icon8 { background-image: url('images/tropicalfruits.png'); }
+.icon9 { background-image: url('images/tarsier.png'); }
+
+.container .card .slide {
+    width: 100%;
+    height: 300px;
+    transition: 0.5s;
+    backface-visibility: hidden;
+}
+
+.container .card .slide.slide1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: .7s;
+    transform: translateY(100px);
+}
+
+.container .card:hover .slide.slide1 {
+    transform: translateY(0px);
+}
+
+.container .card .slide.slide2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: .8s;
+    transform: translateY(-200px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    background: white;
+}
+
+.container .card:hover .slide.slide2 {
+    transform: translateY(0);
+}
+
+.container .card .slide.slide2::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2c73df;
+}
+
+.container .card .slide.slide2 .content p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #414141;
+}
+
+.container .card .slide.slide2 .content h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 24px;
+    text-align: center;
+    color: #414141;
+}
+
+/* Video Gallery */
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+	
+}
+
+
+
+.video-container iframe {
+    width: 100%;
+    height: 315px;
+}
+
+.video {margin-top:200px;}
+
+.trivia{margin-top:200px;}
+
+
+/* Highlights Section */
+#highlights {
+    text-align: center;
+    padding: 50px 
+    position: relative;
+}
+
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .logo {
+        width: 280px;
+        height: auto;
+    }
+    
+    .wildboar, .monkey, .eagle {
+        display: none; /* Hide animations on mobile */
+    }
+    
+    .container .card .slide {
+        height: 250px;
+    }
+    
+    .holographic-card {
+        width: 200px;
+        height: 60px;
+    }
+    
+    .holographic-card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .video-container iframe {
+        width: 48%;
+    }
+}
+
+
+
+/* Quiz Container */
+.quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 3px solid #5e3023;
+  position: relative;
+  overflow: hidden;
+}
+
+.quiz-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: linear-gradient(90deg, 
+    #e67e22, #d35400, #5e3023, #3a5a40, #344e41);
+}
+
+/* Cultural Elements */
+.cultural-heading span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: inline-block;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.cultural-bar {
+  background: linear-gradient(to right, #e67e22, #d35400);
+  height: 8px;
+  border-radius: 4px;
+}
+
+.btn-cultural {
+  background: linear-gradient(to right, #e67e22, #d35400);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+
+.btn-cultural:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+}
+
+/* Quiz Elements */
+.score-display {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5e3023;
+}
+
+.score-icon {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.8rem;
+}
+
+.options-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.option-btn {
+  background: #f8f9fa;
+  border: 2px solid #5e3023;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1.1rem;
+}
+
+.option-btn:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.option-btn.correct {
+  background: linear-gradient(to right, #588157, #3a5a40);
+  color: white;
+  border-color: #344e41;
+}
+
+.option-btn.incorrect {
+  background: linear-gradient(to right, #e63946, #9c2c2c);
+  color: white;
+  border-color: #780000;
+}
+
+.result-icon {
+  font-size: 3rem;
+  animation: bounce 0.5s ease infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}
+
+.final-score-display {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #e67e22, #d35400, #5e3023);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+
+/* Quiz CSS */
+@keyframes celebrate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.perfect-score .final-score-display {
+    animation: celebrate 0.5s ease infinite;
+    color: #e67e22;
+    text-shadow: 0 0 10px rgba(230, 126, 34, 0.5);
+}

@@ -1,0 +1,14 @@
+https://fonts.google.com/specimen/Bai+Jamjuree
+
+
+https://www.w3schools.com/css/css3_gradients.asp
+
+https://www.w3schools.com/css/css3_animations.asp
+
+https://prismic.io/blog/css-hover-effects
+
+https://codepen.io/bananascript/pen/EyZeWm
+
+https://dev.to/devlawrence/creating-a-confetti-effect-from-scratch-using-html-css-and-javascript-4poi
+
+https://adarsh-gupta.medium.com/animating-confetti-in-javascript-a-step-by-step-guide-34b23c31d8e0
