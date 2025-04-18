@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
       question: "It is known as the Surfing Capital of the Philippines.",
       options: ["Davao", "Siargao", "Bukidnon", "Samal"],
       answer: 1,
-      fact: "The Bajau people have lived as nomadic seafarers for centuries, with exceptional free-diving abilities."
+      fact: "Siargao is known as the Surfing Capital of the Philippines, attracting surfers from all over the world."
     },
     {
       question: "What fruit is Mindanao famous for producing?",
@@ -127,8 +127,9 @@ function showFinalResults() {
 	
     finalScoreTitle.textContent = "Quiz Complete!";
     finalScoreDisplay.textContent = `${score}/${totalQuestions}`;
-    
+    progressBar.style.width = `${(currentQuestion / totalQuestions) * 100}%`;
     if (score === totalQuestions) {
+		
         finalMessage.textContent = "Perfect! You're a Mindanao expert!";
         finalScoreDisplay.textContent += " 🎯";
         triggerConfetti(); // Add this line
